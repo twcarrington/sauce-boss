@@ -1,5 +1,5 @@
 class SaucesController < ApplicationController
   def index
-    @sauce = Sauce.all
+    @sauces = Sauce.all
   end
 end

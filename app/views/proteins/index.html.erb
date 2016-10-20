@@ -1,11 +1,9 @@
 <h1>
-  index of proteins
+  PROTEINS INDEX
 </h1>
+
 <ul>
-  poultry,
-  beef,
-  pork,
-  fish,
-  legumes,
-  egg
+  <% @proteins.each do |protein| %>
+  <li> <%= protein.name %> </li>
+  <% end %>
 </ul>

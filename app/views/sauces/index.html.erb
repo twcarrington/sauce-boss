@@ -1,16 +1,9 @@
 <h1>
-  index of sauces
+  SAUCES INDEX
 </h1>
+
 <ul>
-  bordelaise,
-  bearnaise,
-  mornay,
-  americaine,
-  beurre blanc,
-  au poivre,
-  chasseur (hunter),
-  gastrique,
-  tomato fondue,
-  dijonnaise,
-  mushroom duxelles
+  <% @sauces.each do |sauce| %>
+  <li> <%= sauce.name %> </li>
+  <% end %>
 </ul>
