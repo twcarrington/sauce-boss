@@ -1,3 +1,3 @@
-class Protein < ActiveRecord::Base
-  has_many :sauces
+class Sauce < ActiveRecord::Base
+  has_many :proteins
 end
