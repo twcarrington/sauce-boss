@@ -1,11 +1,10 @@
-class ApplicationController < ActionController::API
-  include ActionController::MimeResponds
-    protect_from_forgery with: :null_session
-end
-
-# class ApplicationController < ActionController::Base
-  # protect_from_forgery with: :null_session
+# class ApplicationController < ActionController::API
+  # include ActionController::MimeResponds
 # end
+
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :null_session
+end
 
 class Api::MyController < ApplicationController
    def method1
