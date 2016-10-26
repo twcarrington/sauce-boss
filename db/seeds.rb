@@ -8,8 +8,8 @@ proteins = Protein.create([
 ])
 
 sauces = Sauce.create([
-  { name: 'bordelaise' },
-  { name: 'bearnaise' },
+  { name: 'bordelaise', description: 'red wine, stock reduction, shallots, butter' },
+  { name: 'bearnaise', description: 'hollandaise + vinegar-peppercorn-tarragon reduction' },
   { name: 'mornay' },
   { name: 'americaine' },
   { name: 'beurre blanc' },
