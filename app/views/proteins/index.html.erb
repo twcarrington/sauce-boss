@@ -2,10 +2,12 @@
   PROTEINS INDEX
 </h1>
 
-<div id="app">
+<div >
   <ul>
     <% @proteins.each do |protein| %>
-    <li> <%= protein.name %> </li>
+      <li class="protein-link">
+        <%= link_to "#{protein.name}", protein %>
+      </li>
     <% end %>
   </ul>
 </div>

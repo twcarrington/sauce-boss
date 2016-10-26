@@ -2,8 +2,12 @@
   SAUCES INDEX
 </h1>
 
-<ul>
-  <% @sauces.each do |sauce| %>
-  <li> <%= sauce.name %> </li>
-  <% end %>
-</ul>
+<div >
+  <ul>
+    <% @sauces.each do |sauce| %>
+      <li class="sauce-link">
+        <%= link_to "#{sauce.name}", sauce %>
+      </li>
+    <% end %>
+  </ul>
+</div>
