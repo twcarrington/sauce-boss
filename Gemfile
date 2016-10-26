@@ -8,6 +8,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'react-rails', '~> 1.0'
 gem 'responders'
+gem 'foundation-rails'
+
 # gem 'jbuilder', '~> 2.5'
 # gem 'coffee-rails', '~> 4.2'
 # gem 'redis', '~> 3.0'
