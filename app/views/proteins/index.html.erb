@@ -2,15 +2,14 @@
   PROTEINS INDEX
 </h1>
 
-<div >
-  <ul>
-    <% @proteins.each do |protein| %>
-      <li class="protein-link">
-        <%= link_to "#{protein.name}", protein %>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<table>
+  <% @proteins.each do |protein| %>
+    <tr>
+      <td><%= link_to "#{protein.name}", protein_path(protein) %></td>
+      <td><%= link_to 'edit', edit_protein_path(protein) %></td>
+    </tr>
+  <% end %>
+</table>
 
 <div>
   <%= form_for :protein, url: proteins_path do |f| %>

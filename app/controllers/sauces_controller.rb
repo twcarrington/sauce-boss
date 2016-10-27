@@ -6,6 +6,17 @@ class SaucesController < ApplicationController
   def new
   end
 
+  def edit
+    @sauce = Sauce.find(params[:id])
+
+    if @sauce.update(sauce_params)
+      redirect_to sauces_path
+    else
+      render 'edit'
+    end
+  end
+
+
   def create
     @sauce = Sauce.new(sauce_params)
     @sauce.save
