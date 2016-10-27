@@ -6,6 +6,9 @@ class SaucesController < ApplicationController
   def new
   end
 
+  def create
+  end 
+
   def show
     @sauce =Sauce.find(params[:id])
   end
