@@ -7,12 +7,10 @@ class SaucesController < ApplicationController
   end
 
   def create
-    # render plain: params[:sauce].inspect
-    @sauce = Sauce.new(params[:sauce])
-
+    @sauce = Sauce.new(sauce_params)
     @sauce.save
-    # redirect_to @sauce
-    redirect_to @sauces
+    redirect_to sauces_path
+
   end
 
   def show
@@ -20,7 +18,7 @@ class SaucesController < ApplicationController
   end
 
 private
-  def protein_params
-    params.require(:protein).permit(:name, :description)
+  def sauce_params
+    params.require(:sauce).permit(:name, :description)
   end
 end

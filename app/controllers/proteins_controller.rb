@@ -7,10 +7,9 @@ class ProteinsController < ApplicationController
   end
 
   def create
-    @protein = Protein.new(params[:protein])
-
+    @protein = Protein.new(protein_params)
     @protein.save
-    redirect_to @proteins
+    redirect_to proteins_path
   end
 
   def show
