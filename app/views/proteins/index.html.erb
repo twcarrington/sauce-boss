@@ -13,7 +13,7 @@
 </div>
 
 <div>
-  <%= form_for :protein do |f| %>
+  <%= form_for :protein, url: proteins_path do |f| %>
     <p>
       <%= f.label :name %><br>
       <%= f.text_field :name %>

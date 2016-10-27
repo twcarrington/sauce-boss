@@ -6,6 +6,9 @@ class ProteinsController < ApplicationController
   def new
   end
 
+  def create
+  end
+
   def show
     @protein =Protein.find(params[:id])
   end
