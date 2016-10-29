@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161020220607) do
+ActiveRecord::Schema.define(version: 20161029215032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "combos", force: :cascade do |t|
+    t.integer  "protein_id"
+    t.integer  "sauce_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["protein_id"], name: "index_combos_on_protein_id", using: :btree
+    t.index ["sauce_id"], name: "index_combos_on_sauce_id", using: :btree
+  end
 
   create_table "proteins", force: :cascade do |t|
     t.string   "name",       null: false
@@ -21,23 +30,13 @@ ActiveRecord::Schema.define(version: 20161020220607) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "proteins_and_sauces", force: :cascade do |t|
-    t.integer  "protein_id"
-    t.integer  "sauce_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["protein_id"], name: "index_proteins_and_sauces_on_protein_id", using: :btree
-    t.index ["sauce_id"], name: "index_proteins_and_sauces_on_sauce_id", using: :btree
-  end
-
   create_table "sauces", force: :cascade do |t|
-    t.string   "name",                null: false
+    t.string   "name",         null: false
     t.string   "description"
-    t.string   "ingredient_amount"
-    t.string   "ingredient_unit"
-    t.string   "recipe_instructions"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "ingredients",               array: true
+    t.string   "recipe_steps",              array: true
   end
 
 end

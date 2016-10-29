@@ -13,3 +13,26 @@
     <%= @sauce.description %>
   </h4>
 </div>
+
+<div>
+  <ul>
+    <% @sauce.ingredients.each do |ingredient| %>
+      <li>
+        <%= ingredient %>
+      </li>
+    <% end  %>
+  </ul>
+</div>
+
+<br>
+</br>
+
+<div>
+  <ul>
+    <% @sauce.recipe_steps.each do |step| %>
+      <li>
+        <%= step %>
+      </li>
+    <% end  %>
+  </ul>
+</div>
