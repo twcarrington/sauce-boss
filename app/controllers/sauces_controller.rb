@@ -7,13 +7,13 @@ class SaucesController < ApplicationController
   end
 
   def edit
-    @sauce = Sauce.find(params[:id])
-
-    if @sauce.update(sauce_params)
-      redirect_to sauces_path
-    else
-      render 'edit'
-    end
+    # @sauce = Sauce.find(params[:id])
+    #
+    # if @sauce.update(sauce_params)
+    #   redirect_to sauces_path
+    # else
+    #   render 'edit'
+    # end
   end
 
 

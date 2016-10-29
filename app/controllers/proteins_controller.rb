@@ -7,13 +7,13 @@ class ProteinsController < ApplicationController
   end
 
   def edit
-    @protein = Protein.find(params[:id])
-
-    if @protein.update(protein_params)
-      redirect_to proteins_path
-    else
-      render 'edit'
-    end
+    # @protein = Protein.find(params[:id])
+    # @protein.update(protein_params)
+    # if @protein.update(protein_params)
+    #   redirect_to proteins_path
+    # else
+    #   render 'edit'
+    # end
   end
 
   def create
