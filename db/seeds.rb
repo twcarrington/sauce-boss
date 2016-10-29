@@ -69,3 +69,20 @@ sauces = Sauce.create([
     name: 'duxelles de champignons'
   }
 ])
+
+combos = Combo.create([
+  {
+    protein_id: 2,
+    sauce_id: 1,
+  },
+
+  {
+    protein_id: 2,
+    sauce_id: 2
+  },
+
+  {
+    protein_id: 2,
+    sauce_id: 6
+  }
+])

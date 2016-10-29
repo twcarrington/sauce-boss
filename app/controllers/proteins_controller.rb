@@ -23,7 +23,14 @@ class ProteinsController < ApplicationController
   end
 
   def show
-    @protein =Protein.find(params[:id])
+    @protein = Protein.find(params[:id])
+    @matches = []
+    @combos = Combo.all
+    @combos.each do |combo|
+      if combo.protein_id == @protein.id
+        @matches << combo
+      end
+    end
   end
 
 private
