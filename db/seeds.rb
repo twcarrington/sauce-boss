@@ -72,7 +72,7 @@ sauces = Sauce.create([
       [
         'Heat oil in a large, shallow saucepan over medium-high heat. Add shallots and garlic; sauté 1 minute. Add peppercorns and tomato paste; reduce heat to medium, and cook 1 minute, stirring constantly.',
         'Stir in brandy and vermouth; cook until liquid is reduced by half (about 5 minutes). Add 2 cups Shrimp Stock; bring to a boil. Reduce heat to low, and simmer 10 minutes.',
-        'Add cream and herbs; simmer (do not boil the cream!) for 5 minutes. Strain mixture through a fine sieve over a bowl. Discard solids. Stir in 1/4 teaspoon salt and ground white pepper. Keep warm.'
+        'Add cream and herbs; gently simmer (do not boil the cream!) for 5 minutes. Strain mixture through a fine sieve over a bowl. Discard solids. Stir in 1/4 teaspoon salt and ground white pepper. Keep warm.'
       ]
   },
 
