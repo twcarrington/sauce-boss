@@ -84,5 +84,35 @@ combos = Combo.create([
   {
     protein_id: 2,
     sauce_id: 6
+  },
+
+  {
+    protein_id: 4,
+    sauce_id: 4
+  },
+
+  {
+    protein_id: 4,
+    sauce_id: 5
+  },
+
+  {
+    protein_id: 4,
+    sauce_id: 9
+  },
+
+  {
+    protein_id: 1,
+    sauce_id: 7
+  },
+
+  {
+    protein_id: 1,
+    sauce_id: 8
+  },
+
+  {
+    protein_id: 1,
+    sauce_id: 11
   }
 ])
