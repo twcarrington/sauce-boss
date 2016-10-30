@@ -1,3 +1,11 @@
 <h1>
   <%= @protein.name %>
 </h1>
+
+<div>
+  <% @matching_sauces.each do |matching_sauce| %>
+    <li>
+      <%= link_to "#{matching_sauce.name}", sauce_path(matching_sauce) %>
+    </li>
+  <% end  %>
+</div>

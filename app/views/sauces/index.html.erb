@@ -2,15 +2,15 @@
   SAUCES INDEX
 </h1>
 
-<div >
-  <ul>
-    <% @sauces.each do |sauce| %>
-      <li class="sauce-link">
-        <%= link_to "#{sauce.name}", sauce %>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<table>
+  <% @sauces.each do |sauce| %>
+    <tr>
+      <td><%= link_to "#{sauce.name}", sauce_path(sauce) %></td>
+      <td><%= link_to 'edit', edit_sauce_path(sauce) %></td>
+      <td><%= link_to 'remove' %></td>
+    </tr>
+  <% end %>
+</table>
 
 <div>
   <%= form_for :sauce, url: sauces_path do |f| %>
