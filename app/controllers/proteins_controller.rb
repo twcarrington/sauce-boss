@@ -31,6 +31,16 @@ class ProteinsController < ApplicationController
         @matches << combo
       end
     end
+
+    @matching_sauces = []
+    @sauces = Sauce.all
+    @matches.each do |match|
+      @sauces.each do |sauce|
+        if sauce.id == match.sauce_id
+          @matching_sauces << sauce
+        end
+      end
+    end
   end
 
 private
