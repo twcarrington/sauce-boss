@@ -1,5 +1,5 @@
 <h1>
-  SAUCES INDEX
+  Sauces
 </h1>
 
 <table>
@@ -7,7 +7,7 @@
     <tr>
       <td><%= link_to "#{sauce.name}", sauce_path(sauce) %></td>
       <td><%= link_to 'edit', edit_sauce_path(sauce) %></td>
-      <td><%= link_to 'remove' %></td>
+      <td><%= link_to 'remove', sauce_path(sauce), method: :delete %></td>
     </tr>
   <% end %>
 </table>

@@ -28,6 +28,12 @@ class SaucesController < ApplicationController
     @sauce =Sauce.find(params[:id])
   end
 
+  def destroy
+    @sauce = Sauce.find(params[:id])
+    @sauce.destroy 
+    redirect_to sauces_path
+  end
+
 private
   def sauce_params
     params.require(:sauce).permit(:name, :description)
