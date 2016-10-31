@@ -12,84 +12,68 @@
   <% end %>
 </table>
 
-<div>
-  <%= form_for :sauce, url: sauces_path do |f| %>
-    <p>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </p>
-
-    <p>
-      <%= f.label :description %><br>
-      <%= f.text_field :description %>
-    </p>
-
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
-</div>
 
 <form>
   <div class="row">
-    <div class="large-12 columns">
-      <label>Input Label
-        <input type="text" placeholder="large-12.columns" />
+    <div class="large-4 columns">
+      <label>Sauce Name
+        <input type="text" placeholder="" />
       </label>
     </div>
+
+    <div class="large-8 columns">
+      <label>Description
+        <input type="text" placeholder="a short sentence or two" />
+      </label>
+    </div>
+
   </div>
+
   <div class="row">
-    <div class="large-4 columns">
-      <label>Input Label
-        <input type="text" placeholder="large-4.columns" />
-      </label>
-    </div>
-    <div class="large-4 columns">
-      <label>Input Label
-        <input type="text" placeholder="large-4.columns" />
-      </label>
-    </div>
-    <div class="large-4 columns">
-      <div class="row collapse">
-        <label>Input Label</label>
-        <div class="small-9 columns">
-          <input type="text" placeholder="small-9.columns" />
-        </div>
-        <div class="small-3 columns">
-          <span class="postfix">.com</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Select Box
+    <div class="large-3 columns">
+      <label>Matching Protein
         <select>
-          <option value="husker">Husker</option>
-          <option value="starbuck">Starbuck</option>
-          <option value="hotdog">Hot Dog</option>
-          <option value="apollo">Apollo</option>
+          <option value="poultry">Poultry</option>
+          <option value="beef">Beef</option>
+          <option value="pork">Pork</option>
+          <option value="fish">Fish</option>
+          <option value="legumes">Legumes</option>
+          <option value="egg">Egg</option>
         </select>
       </label>
     </div>
-  </div>
-  <div class="row">
+
     <div class="large-6 columns">
-      <label>Choose Your Favorite</label>
-      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
-    </div>
-    <div class="large-6 columns">
-      <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Textarea Label
-        <textarea placeholder="small-12.columns"></textarea>
-      </label>
+      <a href="#" class="button">Save New Sauce</a>
     </div>
   </div>
 </form>
+
+<!--
+
+
+<div>
+  <%= form_for :sauce, url: sauces_path, html: {:class => 'large-4 columns'} do |f| %>
+    <div class="row">
+      <p>
+        <div class="large-4 columns">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+      </p>
+
+      <p>
+        <div class="large-8 columns"
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+        </div>
+      </p>
+    </div>
+
+    <div class="row">
+      <p>
+        <%= f.submit %>
+      </p>
+    </div>
+  <% end %>
+</div> -->
