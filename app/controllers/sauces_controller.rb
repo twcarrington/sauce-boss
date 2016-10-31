@@ -21,7 +21,6 @@ class SaucesController < ApplicationController
     @sauce = Sauce.new(sauce_params)
     @sauce.save
     redirect_to sauces_path
-
   end
 
   def show
@@ -30,7 +29,7 @@ class SaucesController < ApplicationController
 
   def destroy
     @sauce = Sauce.find(params[:id])
-    @sauce.destroy 
+    @sauce.destroy
     redirect_to sauces_path
   end
 

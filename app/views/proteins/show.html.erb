@@ -2,10 +2,16 @@
   <%= @protein.name %>
 </h1>
 
-<div>
+<br></br>
+
+<h3>
+  sauce pairings
+</h3>
+
+<table>
   <% @matching_sauces.each do |matching_sauce| %>
-    <li>
-      <%= link_to "#{matching_sauce.name}", sauce_path(matching_sauce) %>
-    </li>
+    <tr>
+      <td> <%= link_to "#{matching_sauce.name}", sauce_path(matching_sauce) %> </td>
+    </tr>
   <% end  %>
-</div>
+</table>

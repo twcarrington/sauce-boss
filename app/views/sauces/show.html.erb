@@ -14,8 +14,8 @@
   </h4>
 </div>
 
-<div>
-  <ul>
+<div class="vcard">
+  <ul class="vcard">
     <% @sauce.ingredients.each do |ingredient| %>
       <li>
         <%= ingredient %>
@@ -27,12 +27,12 @@
 <br>
 </br>
 
-<div>
-  <ul>
+<div class="panel callout radius">
+  <ol>
     <% @sauce.recipe_steps.each do |step| %>
       <li>
         <%= step %>
       </li>
     <% end  %>
-  </ul>
+  </ol>
 </div>
