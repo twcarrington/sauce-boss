@@ -1,5 +1,5 @@
 <h1>
-  SAUCES INDEX
+  Sauces
 </h1>
 
 <table>
@@ -7,25 +7,43 @@
     <tr>
       <td><%= link_to "#{sauce.name}", sauce_path(sauce) %></td>
       <td><%= link_to 'edit', edit_sauce_path(sauce) %></td>
-      <td><%= link_to 'remove' %></td>
+      <td><%= link_to 'remove', sauce_path(sauce), method: :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<div>
-  <%= form_for :sauce, url: sauces_path do |f| %>
-    <p>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </p>
 
-    <p>
-      <%= f.label :description %><br>
-      <%= f.text_field :description %>
-    </p>
+<%= form_for :sauce, url: sauces_path do |f| %>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>New Sauce Name
+        <%= f.text_field :name %>
+      </label>
+    </div>
 
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
-</div>
+    <div class="large-8 columns">
+      <label>Description
+        <input type="text" placeholder="" />
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-3 columns">
+      <label>Matching Protein
+        <select>
+          <option value="poultry">Poultry</option>
+          <option value="beef">Beef</option>
+          <option value="pork">Pork</option>
+          <option value="fish">Fish</option>
+          <option value="legumes">Legumes</option>
+          <option value="egg">Egg</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="large-6 columns">
+      <%= f.submit "Save New Sauce"%>
+    </div>
+  </div>
+<% end %>
